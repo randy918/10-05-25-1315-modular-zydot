@@ -1,0 +1,131 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#00d9cc",
+			"activityBar.background": "#00d9cc",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#d200df",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"commandCenter.border": "#e7e7e799",
+			"sash.hoverBorder": "#00d9cc",
+			"statusBar.background": "#00a69c",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#00d9cc",
+			"statusBarItem.remoteBackground": "#00a69c",
+			"statusBarItem.remoteForeground": "#e7e7e7",
+			"titleBar.activeBackground": "#00a69c",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#00a69c99",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "00A69C",
+		"liveServer.settings.port": 5513,
+		"better-comments.tags": [
+			{
+				"tag": "_",
+				"color": "#fff",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#FF2D00",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "!",
+				"color": "#fff600",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#FF2D00",
+				"bold": true,
+				"italic": false
+			},
+			{
+				"tag": "~",
+				"color": "#ffffff",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#a60606",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "?",
+				"color": "#ffffff",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#006df3",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": ">",
+				"color": "#000000",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#ff8000",
+				"bold": true,
+				"italic": false
+			},
+			{
+				"tag": "<",
+				"color": "#ffffff",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#822cce",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "^",
+				"color": "#ffffff",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#e8338d",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "$",
+				"color": "#000",
+				"strikethrough": true,
+				"underline": false,
+				"backgroundColor": "#fff600",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "*",
+				"color": "#000",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "$",
+				"color": "#000",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "-",
+				"color": "#fff",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "#000",
+				"bold": true,
+				"italic": false
+			}
+		]
+	}
+}

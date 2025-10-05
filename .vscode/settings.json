@@ -1,0 +1,177 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#4b63cc",
+        "activityBar.background": "#4b63cc",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#631c29",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#4b63cc",
+        "statusBar.background": "#324ab2",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#4b63cc",
+        "statusBarItem.remoteBackground": "#324ab2",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#324ab2",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#324ab299",
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "editorGroup.border": "#4b63cc",
+        "panel.border": "#4b63cc",
+        "sideBar.border": "#4b63cc",
+        "statusBar.border": "#324ab2",
+        "statusBar.debuggingBackground": "#b29a32",
+        "statusBar.debuggingBorder": "#b29a32",
+        "statusBar.debuggingForeground": "#15202b",
+        "tab.activeBorder": "#4b63cc",
+        "titleBar.border": "#324ab2"
+    },
+    "peacock.color": "#324ab2",
+    "liveServer.settings.port": 5514,
+    "cSpell.words": [
+        "ashutterstock",
+        "childnodes",
+        "shutterstock"
+    ],
+    "favorites.resources": [
+        {
+            "filePath": "index.html",
+            "group": "Default"
+        },
+        {
+            "filePath": "css/index.scss",
+            "group": "Default"
+        },
+        {
+            "filePath": "css/reset.scss",
+            "group": "Default"
+        },
+        {
+            "filePath": "css/universal.scss",
+            "group": "Default"
+        },
+        {
+            "filePath": "js/index.js",
+            "group": "Default"
+        },
+        {
+            "filePath": "js/myfunctions.js",
+            "group": "Default"
+        },
+        {
+            "filePath": "-.txt",
+            "group": "Default"
+        }
+    ],
+    "better-comments.tags": [
+
+
+
+        
+                
+       
+        {
+            "tag": "_",
+            "color": "#fff",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#FF2D00",
+            "bold": false,
+            "italic": false
+        },
+       
+        {
+            "tag": "!",
+            "color": "#fff600",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#FF2D00",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "~",
+            "color": "#ffffff",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#a60606",
+            "bold": false,
+            "italic": false
+        },
+          {
+            "tag": "?",
+            "color": "#ffffff",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#006df3",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": ">",
+            "color": "#000000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#ff8000",
+            "bold": true,
+            "italic": false
+        },
+          {
+            "tag": "<",
+            "color": "#ffffff",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#822cce",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            "tag": "^",
+            "color": "#ffffff",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#e8338d",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "$",
+            "color": "#000",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "#fff600",
+            "bold": false,
+            "italic": false
+        },
+    
+        {
+            "tag": "*",
+            "color": "#000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "$",
+            "color": "#000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "-",
+            "color": "#fff",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#000",
+            "bold": true,
+            "italic": false
+        },
+    ]
+}

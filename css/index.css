@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/WorkSans-Bold.ttf");
+}
+@font-face {
+  font-family: "mid";
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: "light";
+  src: url("../fonts/ClearfaceGothicLTStd-Light.ttf");
+}
+/* LOADER STYLES */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #242f3f; /* A dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out; /* Add this for the fade-out effect */
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey circle */
+  border-top: 8px solid #3498db; /* Blue spinning part */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.reload-button {
+  position: fixed; /* Sticks to the viewport */
+  top: var(--distance-m);
+  left: 48vw;
+  z-index: 1000; /* Ensures it's on top of other content */
+  width: 4vw;
+  height: 4vw;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  border-radius: 50%; /* Makes it circular */
+  display: grid;
+  place-items: center; /* Perfectly centers the icon */
+  color: white;
+  font-size: var(--fontsize-m);
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.reload-button:hover {
+  transform: scale(1.1) rotate(90deg);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  width: 20vw;
+  height: 10vw;
+  background-color: var(--theBackground);
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark2 {
+  font-family: "anton";
+}
+
+.container__super {
+  width: var(--width-m);
+  margin: 0 auto;
+}
+
+.container__general {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: start;
+  align-items: center;
+  border-radius: 5vw;
+  background-color: black;
+}
+.container__general--title {
+  padding: var(--padding-l);
+  padding-bottom: var(--padding-m);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+  padding: var(--padding-l);
+  gap: 2vw;
+}
+
+.flex-container > div {
+  min-width: 16vw;
+  background: #ffecb3;
+  border-radius: 5vw;
+  font-family: "bold-serif";
+  font-size: 1vw;
+  padding: var(--padding-m) var(--padding-m);
+}
+
+/* Enable view transitions with one line */
+@view-transition {
+  navigation: auto;
+}
+/* Target the captured snapshots, not DOM elements */
+::view-transition-old(root) {
+  animation: 300ms ease-out both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms ease-in both fade-in;
+}
+
+/* The magic: shared element morphing */
+.hero-image {
+  view-transition-name: hero;
+}
+
+@media screen and (min-width: 720px) {
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 720px) {
+  .grid__item {
+    column-count: 2;
+    column-gap: clamp(20px, 4vw, 40px);
+    padding-top: 24px;
+    padding-right: clamp(24px, 4vw, 30px);
+    padding-bottom: clamp(16px, 2vw, 32px);
+    padding-left: clamp(20px, 3vw, 30px);
+    border-radius: 10px;
+    background-color: white;
+    column-fill: balance;
+    margin-bottom: 4vw;
+  }
+  .grid__item__title {
+    font-size: clamp(30px, 5vw, 50px);
+    font-family: "bold";
+    color: blueviolet;
+    line-height: 1;
+    word-spacing: -0.5vw;
+    letter-spacing: -0.1vw;
+    padding-top: 12px;
+    padding-bottom: 18px;
+    text-align: left;
+    margin: 0 0 clamp(4px, 0.3vw, 12px) 0;
+    column-span: all;
+  }
+  .grid__item p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    letter-spacing: -0.04vw;
+    font-family: "mid";
+    hyphens: auto;
+  }
+  .grid__item p:first-child {
+    margin-top: 0;
+  }
+  .grid__item ol {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: custom-counter;
+  }
+  .grid__item ol li {
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    position: relative;
+    counter-increment: custom-counter;
+    font-family: "mid";
+    letter-spacing: -0.04vw;
+    hyphens: auto;
+  }
+  .grid__item ol li::before {
+    content: counter(custom-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: blueviolet;
+    font-family: "bold";
+    font-weight: bold;
+  }
+  .grid__item ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 0;
+    list-style: none;
+  }
+  .grid__item ul li {
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    position: relative;
+    font-family: "mid";
+    letter-spacing: -0.04vw;
+    hyphens: auto;
+  }
+  .grid__item ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: blueviolet;
+    font-family: "bold";
+    font-weight: bold;
+  }
+  .grid__item__image {
+    width: 80%;
+    height: auto;
+    margin: 0.5em 0 2em 0;
+    column-span: all;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .grid__item {
+    column-count: 1;
+    padding-top: clamp(20px, 4vw, 40px);
+    padding-right: clamp(20px, 4vw, 40px);
+    padding-bottom: clamp(0px, 1.5vw, 40px);
+    border-radius: 10px;
+    padding-left: clamp(20px, 4vw, 40px);
+    background-color: white;
+    margin-bottom: 6vw;
+  }
+  .grid__item__title {
+    font-size: clamp(10px, 6vw, 200px);
+    font-family: "bold";
+    font-weight: bold;
+    color: blueviolet;
+    word-spacing: -0.5vw;
+    line-height: 1;
+    text-align: left;
+    margin: 0 0 0.2em 0;
+    padding-bottom: 3vw;
+  }
+  .grid__item p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-family: "mid";
+    hyphens: auto;
+  }
+  .grid__item p:first-child {
+    margin-top: 0;
+  }
+  .grid__item ol {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: custom-counter;
+  }
+  .grid__item ol li {
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    position: relative;
+    counter-increment: custom-counter;
+    font-family: "mid";
+  }
+  .grid__item ol li::before {
+    content: counter(custom-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: blueviolet;
+    font-family: "bold";
+    font-weight: bold;
+  }
+  .grid__item ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 0;
+    list-style: none;
+  }
+  .grid__item ul li {
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    position: relative;
+    font-family: "mid";
+  }
+  .grid__item ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: blueviolet;
+    font-family: "bold";
+    font-weight: bold;
+  }
+  .grid__item__image {
+    width: 80%;
+    height: auto;
+    margin: 0.5em 0 1em 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 720px) {
+  .step {
+    font-family: "bold" !important;
+    color: darkblue;
+    font-size: clamp(16px, 4vw, 36px);
+    margin: 0 0 0.1em 0 !important;
+  }
+  .step-subtitle {
+    font-family: "bold" !important;
+    color: steelblue;
+    font-size: clamp(16px, 4vw, 36px);
+    line-height: 1;
+    margin: 0.2em 0 0.25em 0 !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .step {
+    font-family: "bold" !important;
+    color: darkblue;
+    font-size: clamp(17px, 7.2vw, 29px);
+    margin: 0 0 0.1em 0 !important;
+  }
+  .step-subtitle {
+    font-family: "bold" !important;
+    padding-top: 1.5vw;
+    padding-bottom: 1vw;
+    color: steelblue;
+    font-size: clamp(17px, 7.2vw, 29px);
+    line-height: 1;
+    margin: -0.3em 0 0.1em 0 !important;
+  }
+}
+.span-bold {
+  font-family: "bold";
+  color: blueviolet;
+}
+
+.span-bold-faq {
+  font-family: "bold";
+  color: blueviolet;
+}
+
+.dark-blue {
+  color: darkblue;
+}
+
+.p-faq-title {
+  font-family: "bold" !important;
+  color: blueviolet;
+  margin-bottom: 0.5vw !important;
+  font-size: clamp(16px, 1.5vw, 36px);
+}
+
+/*# sourceMappingURL=index.css.map */
